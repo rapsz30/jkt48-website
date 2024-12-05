@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKT48 | Login</title>
+    <link rel="icon" href="Image/favicon.ico" type="Image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="video/JKT48 Trainee - Belalang yang Membangkang Teaser.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="">
+                <div class="form-group">
+                    <label for="email">Alamat Email *</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Kata Sandi *</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+                <div class="form-links">
+                    <ul>
+                        <li><a href="forgetPass.html">Lupa Password</a></li>
+                        <hr>
+                        <li><a href="regist.html">Registrasi</a></li>
+                        <hr>
+                        <li><a href="#">Official Fans Club</a></li>
+                    </ul>
+                </div>
+                <p>Bagian bertanda (*) harus diisi</p>
+                <button type="button" class="btn-login" onclick="goToHome()">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

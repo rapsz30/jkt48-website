@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('path/to/background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container {
+    padding-top: 80px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(230, 0, 0, 0.1);
+    padding: 5px 0;
+    height: 80px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+.navbar-logo {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.navbar-menu li a:hover {
+    background-color: #e60000;
+    color: white;
+}
+
+.carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel {
+    max-width: 65%;
+    overflow: hidden;
+    max-height: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(230, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.content-section {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-section,
+.schedule-section {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+h2 {
+    color: #e60000;
+    border-bottom: 2px solid #e60000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+    /* Memastikan item terlihat */
+    transform: translateY(0);
+    /* Memastikan item tidak terangkat */
+}
+
+.news-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.news-item h3 {
+    text-align: center;
+    color: #e60000;
+    padding: 15px 15px 10px;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.news-item p {
+    text-align: justify;
+    padding: 0 15px 15px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.button-wraper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.news-section button {
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background-color: #ff77a1;
+    border-radius: 10px;
+}
+
+.news-section button:hover {
+    background-color: #ff99cc;
+}
+
+.schedule-section button {
+    margin-top: 20px;
+    width: 50%;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background-color: #ff77a1;
+    border-radius: 10px;
+}
+
+.schedule-section button:hover {
+    background-color: #ff99cc;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-table th {
+    background-color: #e60000;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.schedule-table tr:hover td {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+#trainee {
+    background-color: #7eff7e;
+}
+
+#memInti {
+    background-color: #e60056;
+    color: white;
+}
+
+#event {
+    background-color: #2f5597;
+    color: white;
+}
+
+.birthday-section,
+.discography-section,
+.video-clips-section {
+    margin-bottom: 40px;
+}
+
+.birthday-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.birthday-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    flex: 0 1 calc(30% - 20px);
+    max-width: 245px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.birthday-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.birthday-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.birthday-item h3 {
+    color: #e60000;
+    font-size: 1.25em;
+    margin: 10px 0;
+}
+
+.birthday-item p {
+    color: #555;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+/* Tambahkan CSS ini ke file style1.css */
+.discography-section{
+    margin-bottom: 0;
+    position: relative;
+}
+.container-discograph {
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    margin: 2rem 0;
+}
+
+.content-wrapper-discograph {
+    position: relative;
+    height: auto; /* Sesuaikan dengan kebutuhan */
+}
+
+.content-discograph {
+    display: flex;
+    gap: 3rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.content-discograph .image {
+    flex: 1;
+}
+
+.content-discograph .image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-discograph {
+    flex: 1;
+    padding: 1rem;
+}
+
+.info-discograph h2 {
+    color: #2d3436;
+    margin-bottom: 1.5rem;
+}
+
+.info-discograph h3 {
+    color: #636e72;
+    margin: 1.5rem 0;
+    border-bottom: 2px solid #dfe6e9;
+}
+
+.info-discograph h4 {
+    color: #2d3436;
+    margin: 1rem 0;
+}
+
+.cd, .dvd {
+    background: rgba(225, 225, 225, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1rem 0;
+}
+
+.discography-section .dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Memberikan margin kiri-kanan pada setiap dot */
+}
+
+.discography-section .dot.active {
+    background-color: #2d3436;
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .content-discograph {
+        flex-direction: column;
+    }
+}
+
+.video-clips {
+    display: flex;
+    gap: 20px;
+}
+
+.video-clips a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+}
+
+.video-clips img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #e60000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-menu li a:hover {
+    text-decoration: underline;
+}

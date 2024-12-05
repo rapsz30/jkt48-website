@@ -1,0 +1,118 @@
+body, html{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ 
+    overflow: hidden;
+}
+
+#background-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+ width: 25%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.59);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.instruction {
+    color: #e63946;
+    text-align: center;
+  }
+
+.login-form {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #e63946;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #d62839;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e63946;
+    border-radius: 5px;
+}
+
+.form-control :focus{
+    border-color: #f1faee;
+    box-shadow: 0 0 5px rgba(227, 57, 70, 0.5);
+}
+
+.form-links {
+    margin-top: 20px;
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: #e63946;
+    margin: 10px 0;
+}
+
+.form-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-links li {
+    margin-bottom: 10px;
+}
+
+.form-links a {
+    color: #e63946;
+    text-decoration: none;
+}
+
+.form-links a:hover {
+    color: #d62839;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #d62839;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff77a1;
+    transform: scale(1.05);
+}
